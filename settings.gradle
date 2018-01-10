@@ -1,0 +1,5 @@
+rootProject.name = 'serialport'
+include 'serialport-core'
+include 'serialport-android'
+include 'serialport-gnu'
+

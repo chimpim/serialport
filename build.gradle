@@ -1,0 +1,30 @@
+buildscript {
+    ext.versions = [
+            sourceCompatibility: 1.8,
+            annotations        : '13.0',
+            junit              : '4.12',
+    ]
+    ext.serialport_infos = [
+            group  : 'com.chimpim',
+            version: 'v1.0.0',
+    ]
+}
+
+group serialport_infos.group
+version serialport_infos.version
+
+apply plugin: 'java'
+
+sourceCompatibility = versions.sourceCompatibility
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:' + versions.junit
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
